@@ -39,7 +39,7 @@ markers = (pd.read_csv(markers)
 dna = single_channel_pyramid(path_img, 0)
 viewer = napari.view_image(
      dna, rgb=False, blending='additive',
-     colormap='gray', visible=True, opacity=0.2,
+     colormap='gray', visible=True, opacity=0.8,
      name='DNA1', contrast_limits=[152.0, 49353.0]
     )
 
