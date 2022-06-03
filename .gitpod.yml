@@ -5,6 +5,7 @@ ports:
 tasks:
   - name: Download exemplar data
     init: |
+      eval $(command gp env -e)
       python -m synapseclient -u "$SYN_USER" -p "$SYN_TOKEN" \
         get --downloadLocation /workspace/exemplar-001/ syn31549454 && \
         cd /workspace/exemplar-001/ && \
