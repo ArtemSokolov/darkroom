@@ -2,12 +2,12 @@ image:
   file: Dockerfile
 ports:
   - port: 6080
-    onOpen: open-browser
+    onOpen: open-preview
 tasks:
-  - name: Download exemplar data
-    init: |
+  - init: |
       eval $(command gp env -e)
       python -m synapseclient -u "$SYN_USER" -p "$SYN_TOKEN" \
         get --downloadLocation /workspace/exemplar-001/ syn31549454 && \
         cd /workspace/exemplar-001/ && \
         unzip exemplar-001.zip && rm exemplar-001.zip
+    command: python test.py
