@@ -2,6 +2,7 @@ image:
   file: Dockerfile
 ports:
   - port: 6080
+    onOpen: open-browser
 tasks:
   - name: Download exemplar data
     init: |
