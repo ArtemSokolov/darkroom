@@ -2,3 +2,9 @@ image:
   file: Dockerfile
 ports:
   - port: 6080
+tasks:
+  - name: Download bioformats tools
+    init: |
+      cd /workspace && curl -o bftools.zip \
+        https://downloads.openmicroscopy.org/bio-formats/6.10.0/artifacts/bftools.zip && \
+        unzip bftools.zip && rm bftools.zip
