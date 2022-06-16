@@ -15,4 +15,3 @@ tasks:
         get --downloadLocation /workspace/exemplar-001/ syn31549454 && \
         cd /workspace/exemplar-001/ && \
         unzip exemplar-001.zip && rm exemplar-001.zip
-    command: python test.py
